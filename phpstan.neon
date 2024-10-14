@@ -1,0 +1,9 @@
+parameters:
+    level: 9
+    fileExtensions:
+        - php
+    paths:
+        - .
+    excludePaths:
+        - vendor/*
+        - 'Test/Integration/**/*'
