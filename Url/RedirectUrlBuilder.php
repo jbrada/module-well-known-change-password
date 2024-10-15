@@ -8,7 +8,7 @@ use JBrada\WellKnownChangePassword\Config\Url;
 use JBrada\WellKnownChangePassword\Exception\GeneralException;
 use Magento\Framework\UrlInterface;
 
-class CustomerLoginUrlBuilder
+class RedirectUrlBuilder
 {
     /**
      * @param Url $urlConfig

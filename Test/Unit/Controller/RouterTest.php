@@ -6,7 +6,7 @@ namespace JBrada\WellKnownChangePassword\Test\Unit\Controller;
 
 use JBrada\WellKnownChangePassword\Controller\Router;
 use JBrada\WellKnownChangePassword\Exception\ConfigException;
-use JBrada\WellKnownChangePassword\Url\CustomerLoginUrlBuilder;
+use JBrada\WellKnownChangePassword\Url\RedirectUrlBuilder;
 use Magento\Framework\App\Action\Redirect;
 use Magento\Framework\App\ActionFactory;
 use Magento\Framework\App\ActionInterface;
@@ -28,9 +28,9 @@ class RouterTest extends TestCase
     private $responseMock;
 
     /**
-     * @var CustomerLoginUrlBuilder&\PHPUnit\Framework\MockObject\MockObject
+     * @var RedirectUrlBuilder&\PHPUnit\Framework\MockObject\MockObject
      */
-    private $customerLoginUrlBuilderMock;
+    private $redirectUrlBuilderMock;
 
     /**
      * @var LoggerInterface&\PHPUnit\Framework\MockObject\MockObject
@@ -51,14 +51,14 @@ class RouterTest extends TestCase
     {
         $this->actionFactoryMock = $this->createMock(ActionFactory::class);
         $this->responseMock = $this->createMock(HttpResponse::class);
-        $this->customerLoginUrlBuilderMock = $this->createMock(CustomerLoginUrlBuilder::class);
+        $this->redirectUrlBuilderMock = $this->createMock(RedirectUrlBuilder::class);
         $this->loggerMock = $this->createMock(LoggerInterface::class);
         $this->requestMock = $this->createMock(HttpRequest::class);
 
         $this->router = new Router(
             $this->actionFactoryMock,
             $this->responseMock,
-            $this->customerLoginUrlBuilderMock,
+            $this->redirectUrlBuilderMock,
             $this->loggerMock
         );
     }
@@ -69,7 +69,7 @@ class RouterTest extends TestCase
             ->willReturn('/.well-known/change-password');
 
         $redirectUrl = 'https://example.com/customer/account/change-password';
-        $this->customerLoginUrlBuilderMock->method('build')
+        $this->redirectUrlBuilderMock->method('build')
             ->willReturn($redirectUrl);
 
         $this->responseMock->expects($this->once())
@@ -91,8 +91,8 @@ class RouterTest extends TestCase
         $this->requestMock->method('getPathInfo')
             ->willReturn('/.well-known/change-password');
 
-        $exceptionMessage = __('Error building login URL');
-        $this->customerLoginUrlBuilderMock->method('build')
+        $exceptionMessage = __('Error building password change URL');
+        $this->redirectUrlBuilderMock->method('build')
             ->willThrowException(new ConfigException($exceptionMessage));
 
         $this->loggerMock->expects($this->once())

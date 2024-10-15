@@ -1,6 +1,6 @@
 {
     "name": "jbrada/module-well-known-change-password",
-    "description": "This Magento 2 module provides a well-known endpoint for the 'change password' functionality, allowing seamless redirection to the customer login page.",
+    "description": "This Magento 2 module provides a well-known endpoint for the 'change password' functionality, allowing seamless redirection to the customer password change page.",
     "type": "magento2-module",
     "license": "MIT",
     "authors": [
