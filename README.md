@@ -54,3 +54,12 @@ This standard is already supported by a number of tools, including:
 ## License
 
 This module is licensed under MIT license. Please refer to the `LICENSE.md` file for more information.
+
+
+## About
+
+This project is created by [Jiří Brada](https://jbrada.cz) and is a non-profit initiative to support the Magento community. 
+
+Have feedback? I'd love to [hear from you](mailto:jiri@jbrada.cz).
+
+Connect with me on [LinkedIn](https://www.linkedin.com/in/jbrada) or visit my [website](https://jbrada.cz).
