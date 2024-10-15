@@ -23,7 +23,7 @@ bin/magento setup:upgrade
 
 ## Usage
 
-Once installed, the module automatically exposes the `/.well-known/change-password` URL on your Magento site. When visited, this URL will redirect to the customer login page where users can manage their password.
+Once installed, the module automatically exposes the `/.well-known/change-password` URL on your Magento site. When visited, this URL will redirect to the customer password change page where users can manage their password.
 
 ### Example
 
