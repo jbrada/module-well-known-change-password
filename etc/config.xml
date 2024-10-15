@@ -3,9 +3,9 @@
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
         <jbrada>
-            <well-know-change-password>
+            <well-known-change-password>
                 <path>customer/account/edit/changepass/1</path>
-            </well-know-change-password>
+            </well-known-change-password>
         </jbrada>
     </default>
 </config>

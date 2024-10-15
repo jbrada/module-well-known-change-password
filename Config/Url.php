@@ -9,7 +9,7 @@ use Magento\Store\Model\ScopeInterface;
 
 class Url
 {
-    public const CONFIG_KEY_PATH = 'jbrada/well-know-change-password/path';
+    public const CONFIG_KEY_PATH = 'jbrada/well-known-change-password/path';
 
     /**
      * @param ScopeConfigInterface $scopeConfig
