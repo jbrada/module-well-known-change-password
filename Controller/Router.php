@@ -63,6 +63,7 @@ class Router implements RouterInterface
         }
 
         $this->response->setRedirect($redirectUrl, $this->redirectCode);
+        $request->setDispatched(true);
 
         return $this->actionFactory->create(Redirect::class);
     }
