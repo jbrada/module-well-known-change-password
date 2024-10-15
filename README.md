@@ -1,5 +1,8 @@
 # JBrada - Well-Known Change Password Magento 2 Module
 
+![Code Analysis](https://github.com/jbrada/module-well-known-change-password/actions/workflows/code-analysis.yml/badge.svg)
+![Tests](https://github.com/jbrada/module-well-known-change-password/actions/workflows/tests.yml/badge.svg)
+
 ## Overview
 
 The `JBrada_WellKnownChangePassword` module implements the [`.well-known/change-password`](https://wicg.github.io/change-password-url/) standard for Magento 2. This allows password managers to easily locate and redirect users to the correct URL when they wish to change their password.
@@ -55,6 +58,9 @@ This standard is already supported by a number of tools, including:
 
 This module is licensed under MIT license. Please refer to the `LICENSE.md` file for more information.
 
+## Note on Testing
+
+This repository utilizes [ExtDN's GitHub Actions for Magento 2](https://github.com/extdn/github-actions-m2) to run tests in GitHub Actions.
 
 ## About
 

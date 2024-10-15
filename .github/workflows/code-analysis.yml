@@ -1,0 +1,23 @@
+name: Code Analysis
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  coding-standard:
+    name: Magento Coding Standard
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: extdn/github-actions-m2/magento-coding-standard/8.3@master
+  phpstan:
+    name: PHPStan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: extdn/github-actions-m2/magento-phpstan/8.3@master
+        with:
+          composer_name: jbrada/module-well-known-change-password
+          phpstan_level: '9'
