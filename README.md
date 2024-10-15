@@ -2,7 +2,9 @@
 
 ## Overview
 
-The `JBrada_WellKnownChangePassword` module implements the [`.well-known/change-password`](https://wicg.github.io/change-password-url/) standard for Magento 2. This allows password managers to easily locate and redirect users to the correct URL when they wish to change their password. 
+The `JBrada_WellKnownChangePassword` module implements the [`.well-known/change-password`](https://wicg.github.io/change-password-url/) standard for Magento 2. This allows password managers to easily locate and redirect users to the correct URL when they wish to change their password.
+
+While there are multiple ways to achieve this functionality, such as adding custom URL rewrites in Magento or configuring the webserver, this method directly integrates it within Magento itself. By doing so, the URL is permanently tied into Magento, eliminating the need for further configuration or maintenance.
 
 The module creates a well-known URL `/.well-known/change-password` that redirects to the Magento customer edit page, where users can manage their account and update their password.
 
