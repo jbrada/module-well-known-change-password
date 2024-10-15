@@ -20,19 +20,23 @@ class Router implements RouterInterface
 {
     private const ROUTE_NAME = '.well-known/change-password';
 
+    private const REDIRECT_CODE = 302;
+
     /**
      * @param ActionFactory $actionFactory
      * @param ResponseInterface&HttpResponse $response
      * @param RedirectUrlBuilder $redirectUrlBuilder
      * @param LoggerInterface $logger
      * @param string $routeName
+     * @param int $redirectCode
      */
     public function __construct(
         private readonly ActionFactory      $actionFactory,
         private readonly ResponseInterface  $response,
         private readonly RedirectUrlBuilder $redirectUrlBuilder,
         private readonly LoggerInterface    $logger,
-        private readonly string             $routeName = self::ROUTE_NAME
+        private readonly string             $routeName = self::ROUTE_NAME,
+        private readonly int                $redirectCode = self::REDIRECT_CODE
     ) {
     }
 
@@ -58,7 +62,8 @@ class Router implements RouterInterface
             return null;
         }
 
-        $this->response->setRedirect($redirectUrl);
+        $this->response->setRedirect($redirectUrl, $this->redirectCode);
+        $request->setDispatched(true);
 
         return $this->actionFactory->create(Redirect::class);
     }
