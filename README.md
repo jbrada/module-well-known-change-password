@@ -1,6 +1,6 @@
 # JBrada - Well-Known Change Password Magento 2 Module
 
-[![Magento Package Maven](https://package-maven.com/badge/jbrada/module-well-known-change-password?style=plastic)](https://package-maven.com)
+[![Magento Package Maven Badge](https://package-maven.com/badge/jbrada/module-admin-document-product-links?style=plastic)](https://package-maven.com/jbrada/module-admin-document-product-links)
 ![Code Analysis](https://github.com/jbrada/module-well-known-change-password/actions/workflows/code-analysis.yml/badge.svg)
 ![Tests](https://github.com/jbrada/module-well-known-change-password/actions/workflows/tests.yml/badge.svg)
 
